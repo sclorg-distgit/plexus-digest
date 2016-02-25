@@ -37,7 +37,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        1.1
-Release:        15.11%{?dist}
+Release:        15.12%{?dist}
 Epoch:          0
 Summary:        Plexus Digest / Hashcode Components
 License:        ASL 2.0
@@ -54,7 +54,7 @@ BuildArch:      noarch
 
 BuildRequires:  %{?scl_prefix_java_common}javapackages-tools
 BuildRequires:  %{?scl_prefix_java_common}ant >= 0:1.6
-BuildRequires:  %{?scl_prefix_java_common}maven-local
+BuildRequires:  %{?scl_prefix}maven-local
 BuildRequires:  %{?scl_prefix}maven-compiler-plugin
 BuildRequires:  %{?scl_prefix}maven-install-plugin
 BuildRequires:  %{?scl_prefix}maven-jar-plugin
@@ -110,6 +110,9 @@ set -e -x
 %files javadoc -f .mfiles-javadoc
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 0:1.1-15.12
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 0:1.1-15.11
 - maven33 rebuild #2
 
